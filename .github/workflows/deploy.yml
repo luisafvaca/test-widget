@@ -1,0 +1,44 @@
+name: Deploy Widget to GitHub Pages
+
+on:
+  # Se activa cada vez que haces un push a la rama 'main'
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    # Otorga permisos al workflow para escribir en el repositorio y crear la rama gh-pages
+    permissions:
+      contents: write
+    
+    # El trabajo se ejecutará en la última versión de Ubuntu disponible
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Descarga el código de tu repositorio
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      # 2. Configura el entorno de Node.js (usando la versión 22 como indicaste)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+          cache: 'yarn' # Especifica que el cache es para yarn
+
+      # 3. Instala las dependencias del proyecto
+      - name: Install Dependencies
+        run: yarn install
+
+      # 4. Construye el widget usando Vite
+      - name: Build Widget
+        run: yarn generate
+
+      # 5. Despliega el widget en GitHub Pages
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .output/public
+
