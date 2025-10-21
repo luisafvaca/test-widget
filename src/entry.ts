@@ -1,6 +1,13 @@
 import { createApp } from 'vue'
 import Widget from './Widget.vue'
 
+// Declara la función en el scope global de la ventana
+declare global {
+  interface Window {
+    mountSpalopiaWidget: (options: { targetId: string; clientId: string; }) => void;
+  }
+}
+
 /**
  * Monta el widget de Spalopia en un elemento del DOM.
  * @param options - Opciones para montar el widget.
@@ -26,6 +33,7 @@ function mountSpalopiaWidget(options: { targetId: string; clientId: string; }) {
   app.mount(target);
 }
 
-// Exporta la función para que esté disponible en el objeto global de la librería (SpalopiaWidget)
-export { mountSpalopiaWidget };
+// ¡CAMBIO CLAVE! Asigna la función directamente al objeto window.
+// Esto es más robusto para entornos como CodePen.
+window.mountSpalopiaWidget = mountSpalopiaWidget;
 
