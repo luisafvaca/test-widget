@@ -14,7 +14,7 @@ export default defineConfig({
   build: {
     outDir: '.output/public',
     lib: {
-      entry: path.resolve(__dirname, 'src/entry.ts'),.
+      entry: path.resolve(__dirname, 'src/entry.ts'),
       name: 'SpalopiaWidget',
       fileName: () => 'spalopia-widget.js',
       formats: ['umd'],
