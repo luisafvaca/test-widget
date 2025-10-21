@@ -1,3 +1,4 @@
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode(".spalopia-widget-container[data-v-1e27504e]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;border:2px solid #00dc82;border-radius:12px;padding:2rem;text-align:center;background-color:#f0fdf4;color:#166534}.spalopia-widget-error[data-v-1e27504e]{font-family:sans-serif;border:2px solid #ef4444;border-radius:12px;padding:2rem;text-align:center;background-color:#fee2e2;color:#991b1b}")),document.head.appendChild(e)}}catch(o){console.error("vite-plugin-css-injected-by-js",o)}})();
 (function(Ge){typeof define=="function"&&define.amd?define(Ge):Ge()})((function(){"use strict";/**
 * @vue/shared v3.5.22
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
