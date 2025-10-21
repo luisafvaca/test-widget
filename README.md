@@ -106,7 +106,9 @@ Un cliente final solo necesita seguir estos tres pasos en su página web:
 3. **Inicializar el widget**: Llamar a la función mountSpalopiaWidget.
 
 ### 🧱 Ejemplo completo
-[Ejemplo en codepen:]('https://codepen.io/luisafvaca/pen/raxJZdx')
+
+[Ejemplo en codepen:](https://codepen.io/luisafvaca/pen/raxJZdx)
+
 ```html
 <!DOCTYPE html>
 <html lang="es">
