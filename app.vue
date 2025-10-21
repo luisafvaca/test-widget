@@ -8,6 +8,6 @@
 </template>
 
 <script setup>
-import Widget from './src/Widget.ts'
+import Widget from './src/Widget.vue'
 </script>
 
