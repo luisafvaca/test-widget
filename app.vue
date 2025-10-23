@@ -3,7 +3,7 @@
     <h1>Entorno de Desarrollo del Widget</h1>
     <p>Así se verá tu widget con un ID de prueba:</p>
     <hr style="margin: 1rem 0;">
-    <Widget client-id="cliente-de-prueba-123" />
+    <Widget client-id="cliente-de-prueba-123" with-footer />
   </div>
 </template>
 

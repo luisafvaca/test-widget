@@ -7,7 +7,7 @@ declare global {
   }
 }
 
-function mountSpalopiaWidget(options: { targetId: string; clientId: string; }) {
+function mountSpalopiaWidget(options: { targetId: string; clientId: string; withFooter: boolean; }) {
   const finalOptions = {
     targetId: options.targetId || 'spalopia-widget',
     clientId: options.clientId || ''
@@ -19,7 +19,7 @@ function mountSpalopiaWidget(options: { targetId: string; clientId: string; }) {
     return;
   }
 
-  const app = createApp(Widget, { clientId: finalOptions.clientId });
+  const app = createApp(Widget, { clientId: finalOptions.clientId, withFooter: options.withFooter });
   
   app.mount(target);
 }
